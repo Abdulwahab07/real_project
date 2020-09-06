@@ -14,8 +14,7 @@ class RegionController extends Controller
     }
 
     public function show(Region $region){
-        $regions = Region::findOrFail($region);
-        return new RegionResource($regions);
+        return new RegionResource($region);
     }
 
     protected function validateRequest()

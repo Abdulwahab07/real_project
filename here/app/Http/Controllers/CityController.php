@@ -14,8 +14,7 @@ class CityController extends Controller
     }
 
     public function show(City $city){
-        $cities = City::findOrFail($city);
-        return new CityResource($cities);
+        return new CityResource($city);
     }
 
     public function store(){
